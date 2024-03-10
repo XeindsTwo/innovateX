@@ -16,7 +16,7 @@
 <body class="body">
 
 <main>
-  <section class="home">
+  <section class="home" id="home">
   <div class="container">
     <h1 class="home__title title">
       At InnovateX, we offer a diverse range of interactive courses tailored to suit your interests and goals in:
@@ -56,22 +56,25 @@
   <nav class="nav">
   <ul class="nav__list">
     <li>
-      <a class="nav__link active" href="">Home</a>
+      <a class="nav__link active" href="#home">Home</a>
     </li>
     <li>
-      <a class="nav__link" href="">We believe</a>
+      <a class="nav__link" href="#advantages">Advantages</a>
     </li>
     <li>
-      <a class="nav__link" href="">Consultation</a>
+      <a class="nav__link" href="#reviews">Reviews</a>
     </li>
     <li>
-      <a class="nav__link" href="">Features</a>
+      <a class="nav__link" href="#connected">Connected</a>
+    </li>
+    <li>
+      <a class="nav__link" href="#footer">Follow us</a>
     </li>
   </ul>
   <span class="nav__dot"></span>
   <img class="nav__logo" src="images/icons/logo.svg" width="104" height="18" alt="logo">
 </nav>
-  <section class="advantages">
+  <section class="advantages" id="advantages">
   <div class="container">
     <h2 class="title title-section">Advantages of the Project</h2>
     <ul class="advantages__list">
@@ -106,14 +109,14 @@
     </ul>
   </div>
 </section>
-  <section class="reviews indent">
+  <section class="reviews indent" id="reviews">
   <div class="container">
     <div class="reviews__columns">
       <div class="reviews__more">
         <h2 class="reviews__title title title-section">
           Hear What Our Learners Have to Say About InnovateX
         </h2>
-        <a class="btn btn--light-green" href="" target="_blank">Learn more</a>
+        <a class="btn btn--light-green" href="https://x.com/InnovateXUS" target="_blank">Learn more</a>
       </div>
       <div class="reviews__column">
         <div class="reviews__card one">
@@ -245,7 +248,7 @@
     </div>
   </div>
 </section>
-  <section class="connected indent">
+  <section class="connected indent" id="connected">
   <div class="container">
     <h2 class="connected__title title title-section">Stay Connected with InnovateX!</h2>
     <form class="connected__form" method="post" action="">
@@ -270,7 +273,7 @@
     </p>
   </div>
 </section>
-  <footer class="footer indent">
+  <section class="footer indent" id="footer">
   <div class="container">
     <img class="footer__img" src="images/follow.svg" width="261" height="273" alt="follow us decor">
     <h2 class="footer__title title title-section--big">Follow us on Twitter</h2>
@@ -285,6 +288,6 @@
     </div>
   </div>
   <p class="footer__author">© InnovateX. All rights reserved</p>
-</footer>
+</section>
 </main>
 <script src="js/main.min.js" type="module" defer></script>
