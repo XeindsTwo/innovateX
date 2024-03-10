@@ -5,18 +5,33 @@
     @include topLeft50;
     @include flex-column(40);
     align-items: center;
+    @include r($sm) {
+      max-width: 310px;
+      gap: 30px;
+      width: 100%;
+    }
   }
 
   &__title {
     margin-bottom: 0;
     max-width: 390px;
     line-height: 1;
+    @include r($sm) {
+      max-width: 100%;
+      line-height: 1.1;
+    }
   }
 
   &__columns {
     position: relative;
     display: flex;
     gap: 16px;
+    @media (max-width: 920px) {
+      flex-direction: column;
+    }
+    @include r($tablet) {
+      gap: 12px;
+    }
 
     &::before {
       @include pseudo;
@@ -25,15 +40,45 @@
       height: 100%;
       width: 100%;
       background: radial-gradient(50% 50% at 50% 50%, #FFF 0%, #FFF 38.31%, rgba(255, 255, 255, 0.00) 100%);
+      @include r($lg) {
+        background: radial-gradient(80% 75% at 50% 50%, #FFF 0%, #FFF 38.31%, rgba(255, 255, 255, 0) 100%);
+      }
+      @include r($tablet) {
+        background: radial-gradient(86% 86% at 50% 50%, #FFF 0%, #FFF 38.31%, rgba(255, 255, 255, 0) 100%);
+      }
+      @include r($sm) {
+        background: radial-gradient(90% 125% at 50% 50%, #FFF 0%, #FFF 38.31%, rgba(255, 255, 255, 0) 100%);
+      }
     }
   }
 
   &__column {
     max-width: 276px;
     @include flex-column(16);
+    @media (max-width: 920px) {
+      max-width: 100%;
+      flex-direction: row;
+    }
+    @include r($tablet) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+    @include r($sm) {
+      grid-template-columns: repeat(1, 1fr);
+    }
 
     &--big {
       max-width: 568px;
+      @media (max-width: 920px) {
+        max-width: 100%;
+      }
+    }
+
+    &.last {
+      @include r($sm) {
+        display: none;
+      }
     }
   }
 
@@ -41,6 +86,12 @@
     align-items: flex-start;
     display: flex;
     gap: 16px;
+    @include r($tablet) {
+      gap: 12px;
+    }
+    @include r($tablet) {
+      flex-direction: column;
+    }
   }
 
   &__card {
@@ -48,43 +99,107 @@
     padding: 24px;
     border-radius: 16px;
     border: 1px solid $white10;
+    @include r($desktop) {
+      padding: 22px;
+    }
+    @include r($lg) {
+      padding: 20px;
+    }
+    @media (max-width: 800px) {
+      padding: 20px 16px;
+    }
+    @include r($sm) {
+      min-height: auto !important;
+      gap: 40px;
+    }
+    @include r($phone) {
+      gap: 30px;
+    }
 
     &.one {
       min-height: 289px;
+      @media (max-width: 920px) {
+        min-height: 290px;
+      }
     }
 
     &.two {
       min-height: 324px;
+      @media (max-width: 920px) {
+        min-height: 290px;
+      }
     }
 
     &.three {
       min-height: 325px;
+      @include r($lg) {
+        min-height: 290px;
+      }
+      @media (max-width: 920px) {
+        min-height: 290px;
+      }
     }
 
     &.four {
       min-height: 325px;
+      @media (max-width: 920px) {
+        min-height: 315px;
+      }
+      @include r($tablet) {
+        min-height: auto;
+      }
     }
 
     &.five {
       min-height: 272px;
+      @media (max-width: 920px) {
+        min-height: 315px;
+      }
+      @include r($tablet) {
+        min-height: auto;
+      }
     }
 
     &.six {
       min-height: 410px;
+      @include r($desktop) {
+        min-height: 375px;
+      }
+      @media (max-width: 1100px) {
+        min-height: 350px;
+      }
+      @include r($lg) {
+        min-height: 330px;
+      }
+      @media (max-width: 920px) {
+        min-height: 290px;
+      }
     }
 
     &.seven {
       min-height: 274px;
+      @media (max-width: 920px) {
+        min-height: 290px;
+      }
     }
   }
 
   &__user {
     @include flex-align-center(16);
+    @include r($desktop) {
+      flex-direction: column;
+      gap: 13px;
+      align-items: flex-start;
+    }
   }
 
   &__avatar {
     @include objectCoverBg;
     border-radius: 50%;
+    @media (max-width: 1100px) {
+      width: 44px;
+      height: 44px;
+    }
   }
 
   &__info {
@@ -97,6 +212,12 @@
     font-weight: 400;
     letter-spacing: -0.48px;
     line-height: 1.2;
+    @media (max-width: 1300px) {
+      font-size: 22px;
+    }
+    @media (max-width: 1100px) {
+      font-size: 20px;
+    }
   }
 
   &__content {
