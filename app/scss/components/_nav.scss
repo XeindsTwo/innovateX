@@ -18,6 +18,9 @@
   @media (max-height: 640px) {
     top: 91%;
   }
+  @include r($sm) {
+    display: none;
+  }
 
   &__list {
     display: flex;

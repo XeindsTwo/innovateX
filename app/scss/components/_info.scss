@@ -21,6 +21,13 @@
     text-align: center;
   }
 
+  &__text {
+    @include r($sm) {
+      max-width: 360px;
+      margin: 0 auto;
+    }
+  }
+
   &__actions {
     margin: 0 auto;
     @include flex-align-center(16);
