@@ -1,0 +1,90 @@
+.body {
+  font-family: $inter;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.4;
+  color: $black;
+  background-color: $white;
+  position: relative;
+  overflow-x: hidden;
+
+  &--active {
+    overflow: hidden;
+  }
+}
+
+.container {
+  max-width: 1184px;
+  padding: 0 16px;
+  margin: 0 auto;
+  width: 100%;
+  @include r($phone) {
+    padding: 0 14px;
+  }
+}
+
+.indent {
+  margin-top: 168px;
+  @include r($desktop) {
+    margin-top: 140px;
+  }
+  @media (max-width: 1100px) {
+    margin-top: 120px;
+  }
+  @include r($lg) {
+    margin-top: 100px;
+  }
+  @include r($tablet) {
+    margin-top: 80px;
+  }
+  @include r($sm) {
+    margin-top: 70px;
+  }
+}
+
+.logo {
+  transition: opacity .3s, outline .3s;
+  border-radius: 3px;
+
+  &:hover {
+    opacity: .5;
+  }
+
+  &:focus {
+    outline: 2px solid $white;
+  }
+
+  img {
+    @include objectCoverBg;
+  }
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgba($green, .3);
+}
+
+::-webkit-scrollbar-thumb,
+::selection {
+  background-color: $green;
+}
+
+::selection {
+  color: white;
+}

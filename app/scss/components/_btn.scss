@@ -1,0 +1,48 @@
+.btn {
+  @include flex-center;
+  max-width: max-content;
+  font-size: 16px;
+  line-height: 1;
+  font-weight: 500;
+  background-color: $green;
+  color: $white;
+  border-radius: 40px;
+  padding: 16px 24px;
+  border: 1px solid transparent;
+  transition: color .4s, background-color .4s, opacity .4s, border .4s;
+  @media (max-width: 510px) {
+    font-size: 14px;
+  }
+
+  &:hover {
+    background-color: transparent;
+    border-color: $green;
+    color: $green;
+  }
+
+  &:focus {
+    background-color: $white;
+    border-color: $green;
+    color: $green;
+  }
+
+  &--light-green {
+    background-color: rgba($green, .1);
+    color: $green;
+  }
+
+  &--white {
+    background-color: $white;
+    color: $green;
+
+    &:hover {
+      background-color: transparent;
+      border-color: $white;
+      color: $white;
+    }
+
+    &:focus {
+      opacity: .5;
+    }
+  }
+}

@@ -1,0 +1,60 @@
+.nav {
+  margin: 24px 16px 0;
+  position: sticky;
+  z-index: 30;
+  top: 93.5%;
+  border-radius: 80px;
+  padding: 4px 16px 4px 6px;
+  background-color: rgba($white10, .4);
+  backdrop-filter: blur(32px);
+  max-width: max-content;
+  @include flex-align-center(16);
+  @media (max-height: 780px) {
+    top: 92.4%;
+  }
+  @media (max-height: 690px) {
+    top: 92%;
+  }
+  @media (max-height: 640px) {
+    top: 91%;
+  }
+
+  &__list {
+    display: flex;
+  }
+
+  &__link {
+    display: flex;
+    font-family: $sfpro;
+    color: $gray10;
+    letter-spacing: -0.28px;
+    transition: all .4s;
+    padding: 7.5px 12px;
+    border-radius: 80px;
+
+    &:hover {
+      color: $green;
+    }
+
+    &:focus {
+      color: $white;
+      background-color: $green;
+    }
+
+    &.active {
+      pointer-events: none;
+      user-select: none;
+      color: $black;
+      background-color: $white;
+      font-weight: 500;
+      box-shadow: 0 4px 8.8px 0 rgba(0, 0, 0, 0.09);
+    }
+  }
+
+  &__dot {
+    width: 4px;
+    height: 4px;
+    background-color: $white30;
+    border-radius: 50%;
+  }
+}

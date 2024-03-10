@@ -1,0 +1,90 @@
+.connected {
+  margin: 168px 16px 0;
+  padding: 64px 0;
+  border-radius: 16px;
+  background-color: $green;
+  @include r($desktop) {
+    padding: 52px 0;
+    margin-top: 140px;
+  }
+  @media (max-width: 1100px) {
+    margin-top: 120px;
+  }
+  @include r($lg) {
+    margin-top: 100px;
+  }
+  @include r($tablet) {
+    padding: 42px 0;
+    margin-top: 80px;
+  }
+  @include r($sm) {
+    padding: 34px 0;
+    margin-top: 70px;
+  }
+
+  &__title {
+    color: $white;
+    margin-bottom: 68px;
+  }
+
+  &__form {
+    @include flex-column(16);
+    max-width: 315px;
+    width: 100%;
+    margin: 0 auto 68px;
+    position: relative;
+    @include r($desktop) {
+      margin-bottom: 58px;
+    }
+    @include r($lg) {
+      margin-bottom: 50px;
+    }
+    @include r($tablet) {
+      margin-bottom: 44px;
+    }
+    @media (max-width: 660px) {
+      padding-top: 50px;
+      margin-bottom: 32px;
+    }
+
+    .btn {
+      max-width: 100%;
+    }
+  }
+
+  &__img {
+    @include objectCoverBg;
+    position: absolute;
+    top: -50px;
+    right: -197px;
+    @include r($desktop) {
+      right: -180px;
+    }
+    @include r($lg) {
+      right: -160px;
+    }
+    @media (max-width: 870px) {
+      right: -154px;
+    }
+    @include r($tablet) {
+      right: -135px;
+    }
+    @media (max-width: 685px) {
+      right: -125px;
+    }
+    @media (max-width: 660px) {
+      left: 0;
+      top: -30px;
+    }
+  }
+
+  &__text {
+    color: $green80;
+    max-width: 500px;
+    text-align: center;
+    margin: 0 auto;
+    @include r($sm) {
+      max-width: 360px;
+    }
+  }
+}
