@@ -76,7 +76,7 @@
     }
 
     &.last {
-      @include r($sm) {
+      @include r($tablet) {
         display: none;
       }
     }
@@ -91,6 +91,9 @@
     }
     @include r($tablet) {
       flex-direction: column;
+    }
+    @include r($sm) {
+      display: none;
     }
   }
 
