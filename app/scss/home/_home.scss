@@ -55,6 +55,7 @@
     @media (max-width: 560px) {
       margin: 0 auto;
       transform: translateX(0) rotate(3deg);
+      box-shadow: none;
     }
 
     &--middle {

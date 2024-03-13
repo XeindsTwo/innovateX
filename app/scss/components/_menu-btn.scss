@@ -10,27 +10,19 @@
   transition: all .4s;
   align-items: center;
   justify-content: center;
-  background-color: $white10;
-  @include r($tablet) {
+  background-color: $green;
+  @media (max-width: 850px) {
     display: flex;
   }
 
   &:hover {
-    background-color: $black;
-
-    .menu-btn__line, .menu-btn__line::after, .menu-btn__line::before {
-      background-color: $green;
-    }
-  }
-
-  &:focus {
-    opacity: .5;
+    background-color: rgba($green, .6);
   }
 
   &__line,
   &__line::after,
   &__line::before {
-    background-color: $black;
+    background-color: $white;
     content: '';
     left: 0;
     top: 0;

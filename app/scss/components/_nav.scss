@@ -1,7 +1,7 @@
 .nav {
   margin: 24px 16px 0;
   position: sticky;
-  z-index: 30;
+  z-index: 80;
   top: 93.5%;
   border-radius: 80px;
   padding: 4px 16px 4px 6px;
@@ -13,17 +13,51 @@
     top: 92.4%;
   }
   @media (max-height: 690px) {
-    top: 92%;
+    top: 90%;
   }
   @media (max-height: 640px) {
     top: 91%;
   }
-  @include r($sm) {
+  @media (max-width: 850px) {
+    top: 92%;
+    background-color: rgba($white10, .9);
+  }
+
+  &__mobile {
+    position: fixed;
+    z-index: 75;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($green, 1);
     display: none;
+    padding: 26px 16px 20px;
+    transform: translateX(-100%);
+    transition: transform .5s ease-in-out;
+    @media (max-width: 850px) {
+      display: flex;
+    }
+
+    &.active {
+      transform: translateX(0);
+    }
   }
 
   &__list {
     display: flex;
+    @media (max-width: 850px) {
+      display: none;
+    }
+
+    &.mobile {
+      @media (max-width: 850px) {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 30px;
+      }
+    }
   }
 
   &__link {
@@ -34,9 +68,18 @@
     transition: all .4s;
     padding: 7.5px 12px;
     border-radius: 80px;
+    @media (max-width: 850px) {
+      font-size: 18px;
+      color: $white;
+      border-bottom: 1px solid transparent;
+    }
 
     &:hover {
       color: $green;
+      @media (max-width: 850px) {
+        color: $white;
+        opacity: .5;
+      }
     }
 
     &:focus {
@@ -58,5 +101,8 @@
     height: 4px;
     background-color: $white30;
     border-radius: 50%;
+    @media (max-width: 850px) {
+      background: rgba($gray10, .4);
+    }
   }
 }
